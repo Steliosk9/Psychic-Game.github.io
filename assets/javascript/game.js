@@ -1,7 +1,7 @@
 
 
 // Array of all options
-var computerChoise = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"];
+var computerChoise = ["a", "b", "c"];
 var wins = 0;
 var losses = 0;
 var left = 9;
