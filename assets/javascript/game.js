@@ -20,10 +20,10 @@ var updateGuessesLeft = function() {
     document.querySelector("#guesses-left").innerHTML = guessesLeft;
   };
 
-var soFar = function () {
-    document.getElementById("guess-so-far").innerHTML = "Your Guesses so far: " + yourGuessesSoFar.join(",");
-};
 
+  var updateGuessesSoFar = function() {
+    document.querySelector("#guesses-so-far").innerHTML = guessedLetters.join(", ");
+  };
 
 var guessesLeft = function () {
     document.getElementById("left").innerHTML = " Guesses Left: " + left;
