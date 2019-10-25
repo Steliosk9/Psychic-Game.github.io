@@ -39,30 +39,50 @@ var reset = function() {
     updateGuessesSoFar();
   };
 
-//  event function
 
-document.onkeyup = function (event) {
-    var userGuess = event.key;
-    left--;
-    yourGuessesSoFar.push(userGuess);
-    soFar();
-    guessesLeft();
-    if (left > 0) {
-        if (userGuess == letter) {
-            wins++;
-            document.getElementById("wins").innerHTML = "Wins:" + wins;
-            newGame();
-        }
-    } else if (left == 0) {
-        losses++;
-        document.getElementById("losses").innerHTML = "Losses:" + losses;
-        newGame();
+// Execute on page load.
+updateLetterToGuess();
+updateGuessesLeft();
+
+
+// This function will capture the keyboard clicks.
+document.onkeydown = function(event) {
+    // It's going to reduce the guesses by one
+    guessesLeft--;
+  
+    // Lowercase the letter
+    var letter = event.key.toLowerCase();
+  
+    // Then add the guess to the guessedLetters array
+    guessedLetters.push(letter);
+  
+    // Then its going to run the update functions
+    updateGuessesLeft();
+    updateGuessesSoFar();
+  
+  
+    // We'll check if there's a match.
+    if (letter === letterToGuess) {
+  
+      // If there is then we win and we'll update the HTML to display the win.
+      wins++;
+      document.querySelector("#wins").innerHTML = wins;
+  
+      // Then we'll reset the game
+      reset();
     }
-};
-
-
-
-
+  
+    // If we are out of guesses...
+    if (guessesLeft === 0) {
+  
+      // Then we will loss and we'll update the HTML to display the loss.
+      losses++;
+      document.querySelector("#losses").innerHTML = losses;
+  
+      // Then we'll call the reset.
+      reset();
+    }
+  };
 
 
 
