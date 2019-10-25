@@ -21,7 +21,6 @@ var updateGuessesLeft = function() {
   };
 
   var updateLetterToGuess = function() {
-    // Here we get a random letterToGuess and assign it based on a random generator (only looking at a, b, or c)
     letterToGuess = letters[Math.floor(Math.random() * letters.length)];
   };
 
@@ -31,12 +30,14 @@ var updateGuessesLeft = function() {
 
 
 
-var newGame = function () {
-    left = 9;
-    computerGuess()
-    soFar()
-    guessesLeft()
-};
+// Function will be called when we reset everything
+var reset = function() {
+    guessesLeft = 9;
+    guessedLetters = [];
+    updateLetterToGuess();
+    updateGuessesLeft();
+    updateGuessesSoFar();
+  };
 
 //  event function
 
