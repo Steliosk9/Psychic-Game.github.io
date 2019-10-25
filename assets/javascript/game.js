@@ -1,19 +1,24 @@
+var letters = ["a", "b", "c"];
 
+// This array will hold what we guess
+var guessedLetters = [];
 
-// Array of all options
-var computerChoise = ["a", "b", "c"];
+// This variable will be randomly assigned one of the three letters
+var letterToGuess = null;
+
+// This is what we'll use to count down
+var guessesLeft = 9;
+
+// This is the counter for wins/losses
 var wins = 0;
 var losses = 0;
-var left = 9;
-var yourGuessesSoFar = [];
-var letter;
 
-// randon choise of computer choise of letter
-var computerGuess = function () {
-    letter = computerChoise[Math.floor(Math.random() *
-        computerChoise.length)];
+// Below we created three functions to updateGuesses, updateGuessesLeft, and updateGuessesSoFar
 
-}
+
+var updateGuessesLeft = function() {
+    document.querySelector("#guesses-left").innerHTML = guessesLeft;
+  };
 
 var soFar = function () {
     document.getElementById("guess-so-far").innerHTML = "Your Guesses so far: " + yourGuessesSoFar.join(",");
