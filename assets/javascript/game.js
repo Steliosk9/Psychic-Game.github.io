@@ -20,14 +20,15 @@ var updateGuessesLeft = function() {
     document.querySelector("#guesses-left").innerHTML = guessesLeft;
   };
 
+  var updateLetterToGuess = function() {
+    // Here we get a random letterToGuess and assign it based on a random generator (only looking at a, b, or c)
+    letterToGuess = letters[Math.floor(Math.random() * letters.length)];
+  };
 
   var updateGuessesSoFar = function() {
     document.querySelector("#guesses-so-far").innerHTML = guessedLetters.join(", ");
   };
 
-var guessesLeft = function () {
-    document.getElementById("left").innerHTML = " Guesses Left: " + left;
-};
 
 
 var newGame = function () {
