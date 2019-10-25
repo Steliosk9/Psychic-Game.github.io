@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-    <head>
-        <title>The Psychic Game</title>
-        <link rel="stylesheet" href="assets/css/reset.css">
-        
-    </head>
+<head>
+  <title>The Psychic Game</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
 
-    <style>
+</head>
 
-h1{
-       font-size: 40px;
-       margin: 20px;
-     }
-     
-     #what{
-       font-size: 20px;
-       margin: 20px;
-     }
-     
+<style>
+  h1 {
+    font-size: 40px;
+    margin: 20px;
+  }
 
-      #Psychic {
-       margin: 20px;
-      }
+  #what {
+    font-size: 20px;
+    margin: 20px;
+  }
 
-       p{
-         padding: 3px;
-       }
-     
-        
-      </style>
 
-      <body>
-          <div class="container">
-             <h1> Psychic Game </h1>
-             <p><span id="what"> Guess What Letter I'm Thinging Of !</span></p>
-              <div id="Psychic">
-              <p id="wins">Wins</p>
-              <p id="losses">Losses</p>
-              <p id="left">Guesse Left</p>
-              <p id="guess-so-far">Guesses So Far</p>
-          </div>
-        </div>
+  #Psychic {
+    margin: 20px;
+  }
 
-         
+  p {
+    padding: 3px;
+  }
+</style>
 
-        
-      
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+<body>
 
-    </body>
+  <h1>The Psychic Game</h1>
+
+  <p>Guess what letter I'm thinking of</p>
+
+  <p>Wins: <span id="wins">0</span></p>
+
+  <p>Losses: <span id="losses">0</span></p>
+
+  <p>Guesses Left: <span id="guesses-left"></span></p>
+
+  <p>Your Guesses so far: <span id="guesses-so-far"></span></p>
+
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
 
 
 </html>
