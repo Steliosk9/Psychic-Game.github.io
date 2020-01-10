@@ -1,9 +1,11 @@
 
 # Psychic game 
 
-<hr>
 
-![](./images/Capture.JPG)
+
+![](./assets/Capture.JPG)
+
+<hr>
 
 
 ## Game rules:
