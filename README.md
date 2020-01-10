@@ -1,5 +1,10 @@
 
-# Psychic game  (javascript) 
+# Psychic game 
+
+<hr>
+
+![](./images/Capture.JPG)
+
 
 ## Game rules:
 
