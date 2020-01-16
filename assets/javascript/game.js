@@ -1,4 +1,4 @@
-var letters = ["a", "b", "c"];
+var letters = ["a", "b", "c","p", "r", "g"];
 
 
 var guessedLetters = [];
